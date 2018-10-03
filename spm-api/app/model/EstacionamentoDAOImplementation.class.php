@@ -2,6 +2,10 @@
 
 namespace app\model;
 
+include('../app/model/EstacionamentoDAOInterface.class.php');
+include('../app/model/ConexaoDB.class.php');
+include('../app/classes/Estacionamento.class.php');
+
 use app\classes\Estacionamento;
 use app\model\EstacionamentoDAOInterface;
 use app\model\ConexaoDB;

@@ -1,6 +1,7 @@
 <?php
-
 namespace app\controller;
+
+include('../app/model/EstacionamentoDAOImplementation.class.php');
 
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
@@ -28,7 +29,7 @@ class ControladorApp
         } 
         return $response->withStatus($status);
     }
-
+/*
     public function CadastrarEstacionamentos( Request $request, Response $response, array $args )
     {
 
@@ -56,5 +57,6 @@ class ControladorApp
         }
        
     }
+*/
 
 }
