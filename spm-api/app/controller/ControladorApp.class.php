@@ -7,7 +7,7 @@ use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 use app\model\EstacionamentoDAOImplementation as EstacionamentoDAO;
 use app\classes\BadHttpRequest;
-use app\classes\Estacionamento;
+use app\classes\EstacionamentoAtual;
 
 class ControladorApp
 {
@@ -29,7 +29,7 @@ class ControladorApp
         } 
         return $response->withStatus($status);
     }
-/*
+    /*
     public function CadastrarEstacionamentos( Request $request, Response $response, array $args )
     {
 
@@ -49,10 +49,9 @@ class ControladorApp
                 "timestamp"=>$objEntrada["timestamp"],
                 "estado"=>$objEntrada["estado"]);
             
-                $estacionamento = new Estacionamento($arrayEstacionamento);
-
-
-
+            $estacionamento = new EstacionamentoAtual($arrayEstacionamento);
+            $dao = new EstacionamentoDAO();
+            $dao->
 
         }
        

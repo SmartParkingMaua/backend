@@ -2,11 +2,11 @@
 
 namespace app\model;
 
-use app\classes\Estacionamento;
+use app\classes\EstacionamentoAtual;
 
 Interface EstacionamentoDAOInterface {
 
     public function getAllEstacionamentos( );
-    public function getEstacionamentoById($idEstacionamento);
+    //public function getEstacionamentoById($idEstacionamento);
 
 }
