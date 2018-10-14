@@ -1,12 +1,11 @@
 <?php
 
-include('../app/controller/ControladorApp.class.php');
+include('../controller/ControladorApp.class.php');
 
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
-use \app\controller\ControladorApp;
-use \app\classes\Cliente;
-use \app\model\BoloDAOImplementation as BoloDAO;
+use \controller\ControladorApp;
+
 
 require_once 'config.php';
 
@@ -28,7 +27,8 @@ unset($c['phpErrorHandler']);
 $app->group('/v1',function ( ) {
 
     $this->post('/carros', function (Request $request, Response $response, array $args) {
-    
+        $controlador = new ControladorApp();
+        return $controlador->cadastrarEstacionamentos($request, $response, $args);
     });
 
     $this->get('/estacionamentos', function (Request $request, Response $response, array $args) {
