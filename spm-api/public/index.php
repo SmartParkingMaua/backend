@@ -37,7 +37,10 @@ $app->group('/v1',function ( ) {
     });
 
     $this->get('/estacionamentos/{id}/findByDay', function (Request $request, Response $response, array $args) {
-        
+        $id = $args['id'];
+        $timestamp_query = $_GET['timestamp'];
+        $controlador = new ControladorApp();
+        return $controlador->findByHour($request, $response, $args, $id, $timestamp_query);
     });
     
     $this->delete('/estacionamentos/{id}/findByHour', function (Request $request, Response $response, array $args) {
