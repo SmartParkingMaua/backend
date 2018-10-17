@@ -40,20 +40,28 @@ $app->group('/v1',function ( ) {
         $id = $args['id'];
         $timestamp_query = $_GET['timestamp'];
         $controlador = new ControladorApp();
+        return $controlador->findByDay($request, $response, $args, $id, $timestamp_query);
+    });
+    
+    $this->get('/estacionamentos/{id}/findByHour', function (Request $request, Response $response, array $args) {
+        $id = $args['id'];
+        $timestamp_query = $_GET['timestamp'];
+        $controlador = new ControladorApp();
         return $controlador->findByHour($request, $response, $args, $id, $timestamp_query);
     });
-    
-    $this->delete('/estacionamentos/{id}/findByHour', function (Request $request, Response $response, array $args) {
-        
-    });
 
-    $this->put('/estacionamentos/{id}/findByMonth', function (Request $request, Response $response, array $args) {
-       
+    $this->get('/estacionamentos/{id}/findByMonth', function (Request $request, Response $response, array $args) {
+        $id = $args['id'];
+        $timestamp_query = $_GET['timestamp'];
+        $controlador = new ControladorApp();
+        return $controlador->findByMonth($request, $response, $args, $id, $timestamp_query);
     });
-
 
     $this->get('/estacionamentos/{id}/findByWeek', function (Request $request, Response $response, array $args) {
-    
+        $id = $args['id'];
+        $timestamp_query = $_GET['timestamp'];
+        $controlador = new ControladorApp();
+        return $controlador->findByWeek($request, $response, $args, $id, $timestamp_query);
     });
 
 });
