@@ -1,5 +1,5 @@
 <?php
-    $dsn = 'mysql:host=127.0.0.1:3307;dbname=mydb';
+    $dsn = 'mysql:host=localhost;dbname=mydb';
     $user = 'root';
     $pass = '';
     $pdo = new PDO($dsn, $user, $pass);
