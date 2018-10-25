@@ -7,6 +7,11 @@ const ONE_DAY_TIMESTAMP_MILLISECONDS = 86400000;
 const ONE_WEEK_TIMESTAMP_MILLISECONDS = 604800000;
 const ONE_YEAR_TIMESTAMP_MILLISECONDS = 31536000000;
 
+const nameOfDayOfWeek = [ 'Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sabado' ];
+
+const nameOfMonth = [ 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho',
+        'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro' ];
+
 const mysql = require('mysql');
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -23,11 +28,6 @@ const pool = mysql.createPool({
     database: 'mydb',
     debug: false
 });
-
-const nameOfDayOfWeek = [ 'Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sabado' ];
-
-const nameOfMonth = [ 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho',
-        'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro' ];
 
 
 app.use(cors());
