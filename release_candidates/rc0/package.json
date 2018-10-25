@@ -1,0 +1,25 @@
+{
+  "name": "smartparking_api",
+  "version": "1.0.0",
+  "description": "SmartParking API is the official channel to request data from the backend development environment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SmartParkingMaua/backend.git"
+  },
+  "author": "Kaisen-san",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SmartParkingMaua/backend/issues"
+  },
+  "homepage": "https://github.com/SmartParkingMaua/backend#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "mysql": "^2.16.0"
+  }
+}
