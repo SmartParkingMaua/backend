@@ -1,0 +1,28 @@
+SELECT `action` AS `action`,
+COUNT(CASE WHEN HOUR(createdAt) = 0 THEN action END) AS `0h`,
+COUNT(CASE WHEN HOUR(createdAt) = 1 THEN action END) AS `1h`,
+COUNT(CASE WHEN HOUR(createdAt) = 2 THEN action END) AS `2h`,
+COUNT(CASE WHEN HOUR(createdAt) = 3 THEN action END) AS `3h`,
+COUNT(CASE WHEN HOUR(createdAt) = 4 THEN action END) AS `4h`,
+COUNT(CASE WHEN HOUR(createdAt) = 5 THEN action END) AS `5h`,
+COUNT(CASE WHEN HOUR(createdAt) = 6 THEN action END) AS `6h`,
+COUNT(CASE WHEN HOUR(createdAt) = 7 THEN action END) AS `7h`,
+COUNT(CASE WHEN HOUR(createdAt) = 8 THEN action END) AS `8h`,
+COUNT(CASE WHEN HOUR(createdAt) = 9 THEN action END) AS `9h`,
+COUNT(CASE WHEN HOUR(createdAt) = 10 THEN action END) AS `10h`,
+COUNT(CASE WHEN HOUR(createdAt) = 11 THEN action END) AS `11h`,
+COUNT(CASE WHEN HOUR(createdAt) = 12 THEN action END) AS `12h`,
+COUNT(CASE WHEN HOUR(createdAt) = 13 THEN action END) AS `13h`,
+COUNT(CASE WHEN HOUR(createdAt) = 14 THEN action END) AS `14h`,
+COUNT(CASE WHEN HOUR(createdAt) = 15 THEN action END) AS `15h`,
+COUNT(CASE WHEN HOUR(createdAt) = 16 THEN action END) AS `16h`,
+COUNT(CASE WHEN HOUR(createdAt) = 17 THEN action END) AS `17h`,
+COUNT(CASE WHEN HOUR(createdAt) = 18 THEN action END) AS `18h`,
+COUNT(CASE WHEN HOUR(createdAt) = 19 THEN action END) AS `19h`,
+COUNT(CASE WHEN HOUR(createdAt) = 20 THEN action END) AS `20h`,
+COUNT(CASE WHEN HOUR(createdAt) = 21 THEN action END) AS `21h`,
+COUNT(CASE WHEN HOUR(createdAt) = 22 THEN action END) AS `22h`,
+COUNT(CASE WHEN HOUR(createdAt) = 23 THEN action END) AS `23h`
+FROM `gates` AS `gate`
+WHERE (`gate`.`idParking` = 1 OR `gate`.`idParking` = 2) AND `gate`.`createdAt` BETWEEN '1993-10-28 00:00:00' AND '1993-10-28 23:59:59'
+GROUP BY `action`;

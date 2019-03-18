@@ -1,0 +1,34 @@
+{
+  "name": "smartparking_api",
+  "version": "1.0.0",
+  "description": "SmartParking API is the official channel to request data from the backend development environment",
+  "main": "server.js",
+  "scripts": {
+    "start": "babel-node -r node_modules/dotenv/config server.js",
+    "dev": "nodemon -r node_modules/dotenv/config --exec babel-node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SmartParkingMaua/backend.git"
+  },
+  "author": "Kaisen-san",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SmartParkingMaua/backend/issues"
+  },
+  "homepage": "https://github.com/SmartParkingMaua/backend#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.4",
+    "body-parser": "^1.18.3",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "mysql2": "^1.6.5",
+    "sequelize": "^4.43.0"
+  }
+}
