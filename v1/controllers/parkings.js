@@ -33,7 +33,7 @@ export const getParkingByHour = async ( idParking, timestamp ) => {
   const attributes = [[ 'action', 'action' ]];
 
   for ( let i = 0; i < 60; i+=5 ) {
-    let query = `CASE WHEN MINUTE(createdAt) BETWEEN ${i} AND ${i + 4}` +
+    let query = `CASE WHEN MINUTE(createdAt) BETWEEN ${i} AND ${i + 4} ` +
       'THEN action END';
     let alias = `${i}m`;
 

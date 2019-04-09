@@ -1,6 +1,6 @@
 
 const checkParkingsParams = ( req, res, next ) => {
-  let error = validateParking( +req.params.idParking );
+  let error = validateParkingId( +req.params.idParking );
 
   if ( error ) {
     return next( error );
@@ -15,7 +15,7 @@ const checkParkingsParams = ( req, res, next ) => {
   next();
 }
 
-const validateParking = ( idParking ) => {
+const validateParkingId = ( idParking ) => {
   let error;
 
   if ( Number.isNaN( idParking ) || idParking < 0 ) {
